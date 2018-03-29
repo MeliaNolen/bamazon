@@ -44,11 +44,11 @@ function buy(res) {
     ]).then(function (answers) {
         var itemObject = res[answers.id - 1];
         if (itemObject.stock_quantity - answers.units < 0) {
-            return console.log('Not enough in stock!');
+            return console.log('----------------------\nNot enough in stock!');
         }
         else {
             // console.log(typeof (parseInt(answers.id)));
-            console.log(itemObject.stock_quantity);
+            console.log('----------------------\nThere are currently ' + itemObject.stock_quantity + ' in stock.');
             connection.query('UPDATE products SET ? WHERE ?',
                 [
                     {
@@ -60,27 +60,17 @@ function buy(res) {
                 ],
                 function (err, res) {
                     if (err) throw err;
-                    console.log(res.affectedRows + ' rows affected!');
-                    if (answers.units > 1 && itemObject.department_name != 'shoes') {
-                        console.log('Congratulations! You just bought ' + answers.units + ' '
-                            + itemObject.product_name + 's for $' + itemObject.price * answers.units + '.');
-                    }
-                    else if (itemObject.department_name = 'shoes') {
-                        if (answers.units > 1) {
-                            console.log('Congratulations! You just bought ' + answers.units + ' pairs of '
-                                + itemObject.product_name + ' for $' + itemObject.price * answers.units + '.');
-                        }
-                        else {
-                            console.log('Congratulations! You just bought ' + answers.units + ' pair of '
-                                + itemObject.product_name + ' for $' + itemObject.price * answers.units + '.');
-                        }
-                    }
-                    else {
-                        console.log('Congratulations! You just bought ' + answers.units + ' '
-                            + itemObject.product_name + ' for $' + itemObject.price * answers.units + '.');
-                    }
+                    console.log('----------------------\n' + res.affectedRows + ' rows affected!');
+                    console.log('----------------------\nORDER SUMMARY:' +
+                        '\nProduct: ' + itemObject.product_name +
+                        '\nPrice: $' + itemObject.price +
+                        '\nQuantity: ' + answers.units +
+                        '\nTotal Cost: $' + itemObject.price * answers.units
+                    );
+                    
                 }
             );
+            connection.end();
         }
     });
 };
