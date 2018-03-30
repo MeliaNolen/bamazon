@@ -14,11 +14,11 @@ CREATE TABLE products(
 );
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES('hairbrush', 'beauty', 7.00, 10),
-('backpack', 'bags', 39.99, 4),
-('black suede booties', 'shoes', 35.00, 70),
-('lamp', 'home decor', 59.99, 20),
-('sandals', 'shoes', 25.00, 80),
-('cross body sachel', 'bags', 29.99, 25),
-('wireless mouse', 'tech', 39.99, 30),
-('guitar', 'instruments', 99.99, 12);
+VALUES('hairbrush', 'beauty', 7.00, 100),
+('backpack', 'bags', 39.99, 400),
+('black suede booties', 'shoes', 35.00, 700),
+('lamp', 'home decor', 59.99, 200),
+('sandals', 'shoes', 25.00, 755),
+('cross body sachel', 'bags', 29.99, 250),
+('wireless mouse', 'tech', 39.99, 300),
+('guitar', 'instruments', 99.99, 1);

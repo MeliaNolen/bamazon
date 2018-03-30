@@ -44,7 +44,8 @@ function buy(res) {
     ]).then(function (answers) {
         var itemObject = res[answers.id - 1];
         if (itemObject.stock_quantity - answers.units < 0) {
-            return console.log('----------------------\nNot enough in stock!');
+            console.log('----------------------\nNot enough in stock!');
+            connection.end();
         }
         else {
             // console.log(typeof (parseInt(answers.id)));
