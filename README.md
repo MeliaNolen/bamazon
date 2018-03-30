@@ -20,4 +20,21 @@ In [bamazonDB.sql](./bamazonDB.sql):
 
 ### TO USE THIS APP:
 1. In command line: 
-![alt text](screenshots/filename.png "Description goes here")
+![](screenshots/1.png)
+
+#### Results Demo:  <br>
+![](screenshots/2.png) <br>
+     - Verifies that you are connected to MySQL through your local port (id number will vary)<br><br><br>
+![](screenshots/3.png)<br>
+     - Shows the id, product, and price of each item for sale in the database<br><br><br>
+![](screenshots/4.png)<br>
+     - Inquirer collects data from the user<br><br><br>
+![](screenshots/5.png)<br>
+     - Shows how many of the selected item are in stock, change made to SQL database, and order summary<br><br><br>
+
+#### Lets try another purchase: <br>
+![](screenshots/6.png)<br>
+     - Notice this time, we are purchasing the same product, but we are purchasing more than one.<br><br><br>
+![](screenshots/7.png)<br>
+     - Because our first purchase updated the database, we went from 760 items in stock to 759.<br>
+     - Also, notice that since we bought 4 this time, the total price is $100($25 per pair).<br><br><br>     
