@@ -38,3 +38,6 @@ In [bamazonDB.sql](./bamazonDB.sql):
 ![](screenshots/7.png)<br>
      - Because our first purchase updated the database, we went from 760 items in stock to 759.<br>
      - Also, notice that since we bought 4 this time, the total price is $100($25 per pair).<br><br><br>     
+
+#### If there isn't enough of the item in stock: <br>
+![](screenshots/8.png)
