@@ -4,7 +4,8 @@ bamazon is a command line app(CLI) that mimics the marketplace functionality of 
 ### MODIFICATIONS:
 In [bamazon.js](./bamazon.js):
 1. bamazon will run on port 3306 by default.  If your local device requires a different port, you will need to change the port value on line 7.
-2. You may also need to change the password for MySQL on line 8.
+2. You may need to change the password for MySQL on line 8.
+3. You may also need to change the user on line 7 (default is root).
 
 In [bamazonDB.sql](./bamazonDB.sql):
 1. There are 8 seed data entries so far.  If you would like to change those, or add more, you may do so in this file.
