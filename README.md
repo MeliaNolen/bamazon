@@ -16,6 +16,9 @@ In [bamazonDB.sql](./bamazonDB.sql):
 ```npm i```
 3. Create the database and table used by running [bamazonDB.sql](./bamazonDB.sql) in MySQL 
     * [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+    * You may also run this file from the command line by ![](screenshots/9.png)
+      * You may need to change the user name from root.
+      * It will prompt you after running this line for a password.
 
 *Now you are ready to use the app on your machine.*
 
