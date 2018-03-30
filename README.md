@@ -20,4 +20,4 @@ In [bamazonDB.sql](./bamazonDB.sql):
 
 ### TO USE THIS APP:
 1. In command line: 
-![alt text](screenshots/filename.png "Description goes here")
+![](screenshots/1.png)
